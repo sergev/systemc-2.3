@@ -66,10 +66,10 @@
 
 #if !(defined( _MSC_VER ) && _MSC_VER < 1300) && !defined( __BORLANDC__ )
 #   if defined(__GNUC__) && (__GNUC__ == 2) // Maintain compatibility for 2.95.x
-    	using std::strstream;
-    	using std::strstreambuf;
-    	using std::istrstream;
-    	using std::ostrstream;
+	using std::strstream;
+	using std::strstreambuf;
+	using std::istrstream;
+	using std::ostrstream;
 #   endif
 
     using std::ios;
@@ -96,7 +96,7 @@
     using std::fstream;
     using std::ifstream;
     using std::ofstream;
-    
+
 //  from <cstdio>:
 
 #   if !defined( _MSC_VER )
@@ -131,7 +131,9 @@
     using std::fputs;
     using std::getc;
     using std::getchar;
+#if defined(__cplusplus) && (__cplusplus < 201103L)
     using std::gets;
+#endif
     using std::putc;
     using std::putchar;
     using std::puts;
